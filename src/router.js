@@ -55,6 +55,21 @@ export default new Router({
       path: "/refs",
       name: "refs",
       component: () => import("./views/refs/Parent.vue")
+    },
+    {
+      path: "/smart",
+      name: "smart",
+      component: () => import("./views/smartscoll/smart.vue")
+    },
+    {
+      path: "/lifecycle",
+      name: "lifecycle",
+      component: () => import("./views/lifecycle/index.vue")
+    },
+    {
+      path: "/lifecycle/detail",
+      name: "lifecycle",
+      component: () => import("./views/lifecycle/detail.vue")
     }
   ]
 });

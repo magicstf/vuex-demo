@@ -21,8 +21,8 @@ export default {
   },
   methods: {
     goDetail(id) {
-      this.$router.push({ path: '/detail', query: { id }})
-      // this.$router.push({ name: 'detail', params: {id} })
+      // this.$router.push({ path: '/detail', query: { id }})
+      this.$router.push({ name: 'detail', params: {id} })
     },
    async getList() {
       const res = await this.$api.get('topics');

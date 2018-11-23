@@ -4,7 +4,7 @@ module.exports = {
   productionSourceMap: false,
   devServer: {
     port:8089,
-    host:"local.jd.com",
+    host:"127.0.0.1",
     disableHostCheck: true
   }
 }

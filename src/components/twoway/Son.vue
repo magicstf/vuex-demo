@@ -1,6 +1,6 @@
 <template>
   <div class="son">
-    <input class="input" type="text" :value="value" @input="updateVal($event.target.value)">
+    <div class="input" :value="value"> {{visible}} </div>
   </div>
 </template>
 
@@ -10,10 +10,23 @@ export default {
   props: {
     value: String
   },
-  methods: {
-    updateVal(val) {
-      this.$emit('input', val);
+  data () {
+    return {
+      visible:false
     }
+  },
+  mounted() {
+    if (this.value) {
+      this.visible = this.value;
+    }
+  },
+  watch:{
+      value(val) {
+        this.visible = val;
+      },
+      visible(val) {
+        this.$emit('input', val);
+      }
   }
 };
 </script>
